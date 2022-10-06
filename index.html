@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anugya's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.PNG" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#hobbies">Hobbies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <br>
+                <h1>Hi, I am <span>Anugya Tiwari</span>.</h1>
+                <p>Just started my journey in Comupter Science...</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-------about-------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/emoji.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a student , pursuing my bachelors in Computer Science And Engineering from AKGEC.
+                        I practice coding in Java, and am currently learning about Web-Development.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active link" onclick="opentab('Education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tabs" id="skills">
+
+                        <ul>
+                            <li><span>HTML</span><br>Created pages using HTML</li>
+                            <li><span>CSS</span><br>Designing web pages using CSS</li>
+                            <li><span>JavaScript</span><br>Javascript and related frameworks</li>
+                            <li><span>Java</span><br>Coding in Java </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>Completed class 10 from <span>Holy Child School For Girls</span></li>
+                            <li>Intermediate from <span>Uttam School for Girls.</span></li>
+                            <li>Pursuing Computer Science And Engineering from <span>Ajay Kumar Garg Engineering
+                                    College,Ghaziabad.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+    <!-------------------achievements------------------->
+    <div id="achievements">
+        <div class="container">
+            <h2 class="sub-title">My Achievements</h2>
+            <div class="Achievements-list">
+                    <br>
+                    <ul>
+                        <li>Award for outstanding Academic Performance from Lion Club Ghaziabad.</li>
+                        <li>Award Title for the "Best Delegate" in MUN conference.</li>
+                        <li>Award for Inter School Essay Writing Competion</li>
+                        <li>Gold medal at school level in National Science Olympiad.</li>
+                    </ul>
+            </div>        
+            <br>
+            <!----------------hobbies------------------->
+            <div id="hobbies">
+                <div class="container">
+                    <h2 classs="sub-title">My Hobbies</h2>
+                    <div class="Hobby-list"></div>
+                    <div>
+                        <h2>1) Dancing.</h2>
+                    </div>
+                    <div>
+                        <h2>
+                            2)Reading Self-Help books, classics of Sudha Murthy and autobiographies.
+                        </h2>
+                    </div>
+                    <div>
+                        <h2>
+                            3)Playing Badminton.
+                        </h2>
+                    </div>
+                    <div>
+                        <h2>
+                            4)Watching movies and web series.
+                        </h2>
+                    </div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <!-----------------------contact--------------------------->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left"></div>
+
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i>anugyatiwari51117@gmail.com</p><br>
+                        <p><i class="fa-solid fa-phone"></i>8595710001</p><br>
+                        <div class="social icons">
+                            <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a><br>
+                            <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                        <div class="contact-right">
+                            <form>
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL='<SCRIPT URL'
+        const form= document.forms['submit-to-google-sheet']
+        const msg=document.getElementById("msg");
+        form.addEventListener('submit',e=>{
+            e.preventDefault()
+            fetch(scriptURL,{ method:'POST',body:new FormDate(form)})
+            .then(response=>console.log('Success!',response))
+            .catch(error=>console.error('Error!',error.message))
+        })
+    </script> -->
+</body>
+
+<script src="app.js"></script>
+
+</html>
