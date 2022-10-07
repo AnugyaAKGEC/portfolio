@@ -375,7 +375,7 @@ form .btn{
     #hamnav input:checked ~ #hamitems { display: block; }
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@400;600&display=swap');
+  /*@import url('https://fonts.googleapis.com/css2?family=Yaldevi:wght@400;600&display=swap'); */
   body{
     margin: 0;
     padding: 0;
