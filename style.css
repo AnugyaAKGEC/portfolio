@@ -465,3 +465,19 @@ form .btn{
       margin-top: 20px;
       }
   }
+
+
+  .bi-twitter {
+    color: #55acee;
+    margin: 5px 20px;
+}
+
+.bi-google {
+    color: #dd4b39;
+    margin: 5px 20px;
+}
+
+.bi-youtube {
+    color: #dd4b39;
+    margin: 5px 20px;
+}
